@@ -2,7 +2,7 @@
 public class Driver {
 
 	public static void main(String[] args) {
-		int[] a =  {1,9,5,3,2,8,7,6,4};
+		int[] a =  {7,9,5,3,2,8,1,6,4};
 		
 		for(int i: a)
 			System.out.print(i);
@@ -13,16 +13,51 @@ public class Driver {
 		//smallest order statistic
 		System.out.println(select.randomizedSelect(a, 0, a.length-1, 1));
 		
-		//median order statistic
-		System.out.println(select.randomizedSelect(a, 0, a.length-1, a.length/2));
+		int[] b =  {7,9,5,3,2,8,1,6,4};
+		for(int i: b)
+			System.out.print(i);
+		System.out.println();
 		
+		RandomizedSelect select2 = new RandomizedSelect();
+		//median order statistic
+		System.out.println(select2.randomizedSelect(b, 0, b.length-1, b.length/2));
+		
+		int[] c =  {7,9,5,3,2,8,1,6,4};
+		
+		for(int i: c)
+			System.out.print(i);
+		System.out.println();
+		
+		RandomizedSelect select3 = new RandomizedSelect();
 		//largest order statistic
-		System.out.println(select.randomizedSelect(a, 0, a.length-1, a.length));
+		System.out.println(select3.randomizedSelect(c, 0, c.length-1, c.length));
+		
+		int[] d =  {7,9,5,3,2,8,1,6,4};
+		for(int i: d)
+			System.out.print(i);
+		System.out.println();
 		
 		IterativeRandomSelect selectIter = new IterativeRandomSelect();
 		//smallest order statistic
-		System.out.println(selectIter.randomizedSelectSmall(a, 0, a.length-1, 1));
+		System.out.println(selectIter.randomizedSelectSmall(d, 0, d.length-1, 1));
 		
+		int[] e =  {7,9,5,3,2,8,1,6,4};
+		for(int i: e)
+			System.out.print(i);
+		System.out.println();
+		
+		IterativeRandomSelect selectIter2 = new IterativeRandomSelect();
+		//Median order statistic
+		System.out.println(selectIter2.randomizedSelectSmall(e, 0, e.length-1, e.length/2));
+		
+		int[] f =  {7,9,5,3,2,8,1,6,4};
+		for(int i: f)
+			System.out.print(i);
+		System.out.println();
+		
+		IterativeRandomSelect selectIter3 = new IterativeRandomSelect();
+		//smallest order statistic
+		System.out.println(selectIter3.randomizedSelectSmall(f, 0, f.length-1, f.length));
 
 	}
 
